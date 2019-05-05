@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="en">
+<!-- 
+    Created By Samuel on 17 April 2019
+ -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Font  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Css -->
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- jQuery -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- Js  -->
+    <script type="text/javascript" src="script.js"></script>
+    <title>Tokoku</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue px-5 shadow-sm">
+        <a class="navbar-brand" href="#">Tokoku</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcollapse"
+            aria-controls="navcollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navcollapse">
+            <!-- <ul class="navbar-nav">
+                <li class="nav-item  ml-5">
+                    <a class="nav-link navbutton" href="#">Kategori</a>
+                </li>
+            </ul> -->
+
+            <form class="mx-5 my-auto d-inline w-100">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-sm btn-light text-info btnsearchleft ml-5">
+                            <i class="fas fa-search icon"></i>
+                        </button>
+                    </div>
+                    <input id="search" class="form-control form-control-sm bg-light my-auto" type="search"
+                        placeholder="Search" aria-label="Search">
+                    <!-- <div class="input-group-btn">
+                        <button type="button" class="btn btn-sm btn-light text-info btnsearchright">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div> -->
+                </div>
+            </form>
+
+            <ul class="navbar-nav ml-auto text-center">
+                <li class="nav-item mr-3 my-auto">
+                    <a class="nav-link navbutton" title="Pesan" href="#">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </li>
+                <li class="nav-item mr-3 my-auto">
+                    <a class="nav-link navbutton" title="Notifikasi" href="#">
+                        <i class="fas fa-bell" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item mr-3 my-auto">
+                    <a class="nav-link navbutton" title="Favorit saya" href="#">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item mr-3 my-auto">
+                    <a class="nav-link navbutton" title="Keranjang Belanja" href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li class="nav-item mr-3 my-auto">
+                    <a class="nav-link navbutton" href="#">Masuk</a>
+                </li>
+                <li class="nav-item mr-3 my-auto">
+                    <a class="nav-link navbutton" href="#">Daftar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div id="content" class="h-100">
+        <!-- Carousel -->
+        <div id="carouselheader" class="carousel slide" data-ride="carousel">
+            <!-- Indicatornya -->
+            <ol class="carousel-indicators">
+                <li data-target="#carouselheader" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselheader" data-slide-to="1"></li>
+                <li data-target="#carouselheader" data-slide-to="2"></li>
+                <!-- <li data-target="#carouselheader" data-slide-to="3"></li> -->
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row bgheader-2 text-light" style="height: 300px;">
+                        <div class="col-8 p-lg-5 my-auto mx-auto text-center">
+                            <h2>Barang elektronik berkualitas</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!-- <img class="d-block w-100" src="../../image/blast.jpg" alt="First slide"> -->
+                    <div class="row bgheader-4 text-light" style="height: 300px;">
+                        <div class="col-8 p-lg-5 my-auto mx-auto text-center">
+                            <h2>Bawa yang terbaik</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row bgheader-1 text-light" style="height: 300px;">
+                        <div class="col-8 p-lg-5 my-auto mx-auto text-left">
+                            <h2>Handphone Resolusi Tinggi</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev control-caro" href="#carouselheader" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next control-caro" href="#carouselheader" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- Sidebar -->
+        <!-- <div class="icon-bar">
+            <a href="#" class="itemside"><i class="fa fa-mobile-alt" aria-hidden="true"></i></a>
+            <a href="#" class="itemside"><i class="fas fa-" aria-hidden="true"></i></a>
+            <a href="#" class="itemside"><i class="fas fa-phone" aria-hidden="true"></i></a>
+        </div> -->
+
+
+        <!-- Buat scroll atas -->
+        <div class="backTop btn btn-outline-info mx-3 my-5">
+            <i class="fas fa-chevron-up" aria-hidden="true"></i>
+        </div>
+
+        <!-- Promo -->
+        <div class="row col-12 mx-auto">
+            <div class="col-5 mx-auto py-3">
+                <span class="title-content">Promo</span>
+            </div>
+            <div class="col-5 mx-auto py-3" style="text-align: right">
+                <a class="btnseemore" href="#">Lihat Semua</a>
+            </div>
+
+            <div class="col-11 mx-auto">
+                <!-- <hr class="divider-grey my-1"> -->
+                <div class="card-deck">
+                    <div class="card shadowhover">
+                        <img src="image/promo2.webp" class="card-img-top w-75 mx-auto" alt="...">
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Handphone</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <!-- <span class="text-small text-muted">Mulai dari</span> -->
+                                <a class="text-muted text-small text-decoration-none"
+                                    href="#"><small><s>Rp.000.000</s></small></a>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadowhover">
+                        <img src="image/promo1.jpg" class="card-img-top w-75 mx-auto" alt="...">
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Laptop</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <!-- <span class="text-small text-muted">Mulai dari</span> -->
+                                <a class="text-muted text-small text-decoration-none"
+                                    href="#"><small><s>Rp.000.000</s></small></a>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadowhover">
+                        <img src="image/promo4.webp" class="card-img-top w-75 mx-auto" alt="...">
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Handphone</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <!-- <span class="text-small text-muted">Mulai dari</span> -->
+                                <a class="text-muted text-small text-decoration-none"
+                                    href="#"><small><s>Rp.000.000</s></small></a>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadowhover">
+                        <img src="image/promo3.jpg" class="card-img-top w-75 mx-auto" alt="...">
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Kamera</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <!-- <span class="text-small text-muted">Mulai dari</span> -->
+                                <a class="text-muted text-small text-decoration-none"
+                                    href="#"><small><s>Rp.000.000</s></small></a>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadowhover">
+                        <img src="image/promo5.png" class="card-img-top w-75 mx-auto" alt="...">
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Handphone</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <!-- <span class="text-small text-muted">Mulai dari</span> -->
+                                <a class="text-muted text-small text-decoration-none"
+                                    href="#"><small><s>Rp.000.000</s></small></a>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Official Store -->
+        <div class="row col-12 mx-auto">
+            <div class="col-5 mx-auto py-3">
+                <span class="title-content">Official Store</span>
+            </div>
+            <div class="col-5 mx-auto py-3" style="text-align: right">
+                <a class="btnseemore" href="#">Lihat Semua</a>
+            </div>
+
+            <div id="tabs" class="col-11 mx-auto">
+                <ul>
+                    <li><a href="#tabs-1">Popular Brand</a></li>
+                    <li><a href="#tabs-2">Handphone</a></li>
+                    <li><a href="#tabs-3">Laptop</a></li>
+                    <li><a href="#tabs-4">Kamera</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <span class="row col-12 bg-light">
+                        <div class="col-2 d-none d-md-block text-light text-center my-auto py-3 border border-info">
+                            <h4 class="text-info my-auto">Official Store</h4>
+                        </div>
+                        <div class="col-10">
+                            <div class="text-center">
+                                <img src="image/apple.jpg" class="imgstore" alt="">
+                                <img src="image/microsoft.jpg" class="imgstore" alt="">
+                                <img src="image/samsung.png" class="imgstore" alt="">
+                                <img src="image/sony.png" class="imgstore" alt="">
+                            </div>
+                            <div class="text-center mt-1">
+                                <img src="image/mi.jpg" class=" imgstore" alt="">
+                                <img src="image/asus.png" class="imgstore" alt="">
+                                <img src="image/lenovo.jpg" class="imgstore" alt="">
+                                <img src="image/hp.png" class="imgstore" alt="">
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div id="tabs-2">
+                    <span class="row col-12 bg-light">
+                        <div class="col-2 d-none d-md-block text-light text-center my-auto py-3 border border-info">
+                            <h4 class="text-info my-auto">Handphone</h4>
+                        </div>
+                        <div class="col-10">
+                            <div class="text-center">
+                                <img src="image/asus.png" class="imgstore" alt="">
+                                <img src="image/logoadvan.jpg" class="imgstore" alt="">
+                                <img src="image/logonokia.png" class="imgstore" alt="">
+                                <img src="image/sony.png" class="imgstore" alt="">
+                            </div>
+                            <div class="text-center mt-1">
+                                <img src="image/mi.jpg" class=" imgstore" alt="">
+                                <img src="image/samsung.png" class="imgstore" alt="">
+                                <img src="image/apple.jpg" class="imgstore" alt="">
+                                <img src="image/logovivo.png" class="imgstore" alt="">
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div id="tabs-3">
+                    <span class="row col-12 bg-light">
+                        <div class="col-2 d-none d-md-block text-light text-center my-auto py-3 border border-info">
+                            <h4 class="text-info my-auto">Laptop</h4>
+                        </div>
+                        <div class="col-10">
+                            <div class="text-center">
+                                <img src="image/asus.png" class="imgstore" alt="">
+                                <img src="image/logoacer.jpg" class=" imgstore" alt="">
+                                <img src="image/logoaxioo.jpg" class="imgstore" alt="">
+                                <img src="image/logodell.png" class="imgstore" alt="">
+
+                            </div>
+                            <div class="text-center mt-1">
+                                <img src="image/hp.png" class="imgstore" alt="">
+                                <img src="image/logofujitsu.png" class="imgstore" alt="">
+                                <img src="image/lenovo.jpg" class="imgstore" alt="">
+                                <img src="image/logotoshiba.png" class="imgstore" alt="">
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div id="tabs-4">
+                    <span class="row col-12 bg-light">
+                        <div class="col-2 d-none d-md-block text-light text-center my-auto py-3 border border-info">
+                            <h4 class="text-info my-auto">Kamera</h4>
+                        </div>
+                        <div class="col-10">
+                            <div class="text-center">
+                                <img src="image/sony.png" class="imgstore" alt="">
+                                <img src="image/samsung.png" class="imgstore" alt="">
+                                <img src="image/logocasio.png" class="imgstore" alt="">
+                                <img src="image/logopanasonic.jpg" class="imgstore" alt="">
+
+                            </div>
+                            <div class="text-center mt-1">
+                                <img src="image/logocanon.jpg" class="imgstore" alt="">
+                                <img src="image/logofujifilm.png" class="imgstore" alt="">
+                                <img src="image/logoolimpus.jpg" class="imgstore" alt="">
+                                <img src="image/logonikon.jpg" class=" imgstore" alt="">
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hot List -->
+        <div class="row col-12 mx-auto">
+            <div class="col-5 mx-auto py-3">
+                <span class="title-content">Hot List</span>
+            </div>
+            <div class="col-5 mx-auto py-3" style="text-align: right">
+                <a class="btnseemore" href="#">Lihat Semua</a>
+            </div>
+
+            <div class="col-11 mx-auto">
+                <!-- <hr class="divider-grey my-1"> -->
+                <div class="card-deck">
+                    <div class="card shadowhover">
+                        <img src="image/hot1.jpg" class="card-img-top" alt="Handphone Samsung"
+                            title="Handphone Samsung">
+                    </div>
+                    <div class="card shadowhover">
+                        <img src="image/hot2.jpg" class="card-img-top" alt="Audio Technica ATH-M40X"
+                            title="Audio Technica ATH-M40X">
+                    </div>
+                    <div class="card shadowhover">
+                        <img src="image/realme.jpg" class="card-img-top" alt="Realme 2 Pro" title="Realme 2 Pro">
+                    </div>
+                    <div class="card shadowhover">
+                        <img src="image/rednote7.jpg" class="card-img-top" alt="Redmi Note 7" title="Redmi Note 7">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <hr class="mt-5 w-75"> -->
+
+        <!-- Handphone -->
+        <div class="row col-12 mx-auto">
+            <div class="col-5 mx-auto py-3">
+                <span class="title-content">Handphone</span>
+            </div>
+            <div class="col-5 mx-auto py-3" style="text-align: right">
+                <a class="btnseemore" href="#">Lihat Semua</a>
+            </div>
+
+            <div class="col-11 mx-auto">
+                <div class="card-deck">
+                    <div class="card shadowhover">
+                        <img src="image/hp1.png" class="card-img-top w-100 mx-auto" alt="...">
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Xperia M5</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadowhover">
+                        <img src="image/hp2.png" class="card-img-top w-100 mx-auto" alt="...">
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Xperia Z3+</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadowhover">
+                        <img src="image/hp3.png" class="card-img-top w-100 mx-auto" alt="...">
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Xperia C4</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadowhover">
+                        <img src="image/hp4.png" class="card-img-top w-100 mx-auto" alt="...">
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Xperia M4</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadowhover">
+                        <img src="image/hp5.png" class="card-img-top w-100 mx-auto" alt="...">
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Xperia Z5</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Laptop -->
+        <div class="row col-12 mx-auto">
+            <div class="col-5 mx-auto py-3">
+                <span class="title-content">Laptop</span>
+            </div>
+            <div class="col-5 mx-auto py-3" style="text-align: right">
+                <a class="btnseemore" href="#">Lihat Semua</a>
+            </div>
+
+            <div class="col-11 mx-auto">
+                <div class="card-deck">
+                    <div class="card shadowhover">
+                        <a href="#"><img src="image/laptop1.jpg" class="card-img-top w-100 mx-auto" alt="..."></a>
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Laptop</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadowhover">
+                        <a href="#"><img src="image/laptop2.jpg" class="card-img-top w-100 mx-auto" alt="..."></a>
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Laptop</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadowhover">
+                        <a href="#"><img src="image/laptop3.jpg" class="card-img-top w-100 mx-auto" alt="..."></a>
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Laptop</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadowhover">
+                        <a href="#"><img src="image/laptop4.jpg" class="card-img-top w-100 mx-auto" alt="..."></a>
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Laptop</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Kamera -->
+        <div class="row col-12 mx-auto">
+            <div class="col-5 mx-auto py-3">
+                <span class="title-content">Kamera</span>
+            </div>
+            <div class="col-5 mx-auto py-3" style="text-align: right">
+                <a class="btnseemore" href="#">Lihat Semua</a>
+            </div>
+
+            <div class="col-11 mx-auto">
+                <div class="card-deck">
+                    <div class="card shadowhover">
+                        <img src="image/kamera1.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Kamera</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadowhover">
+                        <img src="image/kamera2.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Kamera</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadowhover">
+                        <img src="image/kamera3.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Kamera</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadowhover">
+                        <img src="image/kamera4.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Kamera</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadowhover">
+                        <img src="image/kamera5.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                        <div class="card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Kamera</span>
+                                <span>
+                                    <i class="far fa-heart heart" aria-hidden="true" title="Tambah ke favorit"></i>
+                                    <i class="fas fa-shopping-cart text-blue" aria-hidden="true"
+                                        title="Tambah ke troli"></i>
+                                    <i class="fas fa-share-alt text-blue" aria-hidden="true" title="Bagikan"></i>
+                                </span>
+                            </div>
+                            <div>
+                                <a href="#"><small href="#">Rp.000.000</small></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aksesoris -->
+        <div class="row col-12 mx-auto">
+            <div class="col-5 mx-auto py-3">
+                <span class="title-content">Aksesoris</span>
+            </div>
+            <div class="col-5 mx-auto py-3" style="text-align: right">
+                <a class="btnseemore" href="#">Lihat Semua</a>
+            </div>
+
+            <div class="col-11 mx-auto">
+                <div id="carouselExampleInterval2" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner px-2 py-3">
+                        <div class="carousel-item active" data-interval="10000">
+                            <div class="card-deck">
+                                <div class="card shadowhover">
+                                    <img src="image/pwbank.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                                    <!-- <div class="card-body text-center">
+                                        <p>
+                                            <span class="text-small text-muted">Mulai dari</span>
+                                            <a class="text-small" href="#">Rp.000.000</a></p>
+                                    </div> -->
+                                    <div class="card-body text-center">
+                                        <div class="justify-content-center d-flex">
+                                            <small>Power Bank Hippo</small>
+                                        </div>
+                                        <span class="text-small text-muted">Mulai dari</span>
+                                        <p><a class="text-small" href="#">Rp.000.000</a></p>
+                                    </div>
+                                </div>
+                                <div class="card shadowhover">
+                                    <img src="image/headset3.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                                    <div class="card-body text-center">
+                                        <div class="justify-content-center d-flex">
+                                            <small>Xiaomi Mi Piston Air Capsule</small>
+                                        </div>
+                                        <span class="text-small text-muted">Mulai dari</span>
+                                        <p><a class="text-small" href="#">Rp.000.000</a></p>
+                                    </div>
+                                </div>
+                                <div class="card shadowhover">
+                                    <img src="image/earphone.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                                    <div class="card-body text-center">
+                                        <div class="justify-content-center d-flex">
+                                            <small>Earphone Hippo</small>
+                                        </div>
+                                        <span class="text-small text-muted">Mulai dari</span>
+                                        <p><a class="text-small" href="#">Rp.000.000</a></p>
+                                    </div>
+                                </div>
+                                <div class="card shadowhover">
+                                    <img src="image/headset1.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                                    <div class="card-body text-center">
+                                        <div class="justify-content-center d-flex">
+                                            <small>JBL C100SI</small>
+                                        </div>
+                                        <span class="text-small text-muted">Mulai dari</span>
+                                        <p><a class="text-small" href="#">Rp.000.000</a></p>
+                                    </div>
+                                </div>
+                                <div class="card shadowhover">
+                                    <img src="image/soundbar.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                                    <div class="card-body text-center">
+                                        <div class="justify-content-center d-flex">
+                                            <small>Soundbar LG</small>
+                                        </div>
+                                        <span class="text-small text-muted">Mulai dari</span>
+                                        <p><a class="text-small" href="#">Rp.000.000</a></p>
+                                    </div>
+                                </div>
+                                <div class="card shadowhover">
+                                    <img src="image/headset2.jpeg" class="card-img-top w-100 mx-auto" alt="...">
+                                    <div class="card-body text-center">
+                                        <div class="justify-content-center d-flex">
+                                            <small>Sennheiser MX170</small>
+                                        </div>
+                                        <span class="text-small text-muted">Mulai dari</span>
+                                        <p><a class="text-small" href="#">Rp.000.000</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-interval="2000">
+                            <div class="card-deck">
+                                <div class="card shadowhover">
+                                    <img src="image/headset3.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                                    <div class="card-body text-center">
+                                        <div class="justify-content-center d-flex">
+                                            <small>Xiaomi Mi Piston Air Capsule</small>
+                                        </div>
+                                        <span class="text-small text-muted">Mulai dari</span>
+                                        <p><a class="text-small" href="#">Rp.000.000</a></p>
+                                    </div>
+                                </div>
+                                <div class="card shadowhover">
+                                    <img src="image/applecarger.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                                    <div class="card-body text-center">
+                                        <div class="justify-content-center d-flex">
+                                            <small>Apple Watch Charger</small>
+                                        </div>
+                                        <span class="text-small text-muted">Mulai dari</span>
+                                        <p><a class="text-small" href="#">Rp.000.000</a></p>
+                                    </div>
+                                </div>
+                                <div class="card shadowhover">
+                                    <img src="image/headset1.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                                    <div class="card-body text-center">
+                                        <div class="justify-content-center d-flex">
+                                            <small>JBL C100SI</small>
+                                        </div>
+                                        <span class="text-small text-muted">Mulai dari</span>
+                                        <p><a class="text-small" href="#">Rp.000.000</a></p>
+                                    </div>
+                                </div>
+                                <div class="card shadowhover">
+                                    <img src="image/earphone.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                                    <div class="card-body text-center">
+                                        <div class="justify-content-center d-flex">
+                                            <small>Earphone Hippo</small>
+                                        </div>
+                                        <span class="text-small text-muted">Mulai dari</span>
+                                        <p><a class="text-small" href="#">Rp.000.000</a></p>
+                                    </div>
+                                </div>
+                                <div class="card shadowhover">
+                                    <img src="image/headset4.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                                    <div class="card-body text-center">
+                                        <div class="justify-content-center d-flex">
+                                            <small>Phlipis SHE3015</small>
+                                        </div>
+                                        <span class="text-small text-muted">Mulai dari</span>
+                                        <p><a class="text-small" href="#">Rp.000.000</a></p>
+                                    </div>
+                                </div>
+                                <div class="card shadowhover">
+                                    <img src="image/soundbar.jpg" class="card-img-top w-100 mx-auto" alt="...">
+                                    <div class="card-body text-center">
+                                        <div class="justify-content-center d-flex">
+                                            <small>Sounbar LG</small>
+                                        </div>
+                                        <span class="text-small text-muted">Mulai dari</span>
+                                        <p><a class="text-small" href="#">Rp.000.000</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleInterval2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleInterval2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="container-fluid mt-5 pt-5 pb-3 px-5 bg-blue text-light">
+            <div class="row px-5">
+                <div class="col-12 col-md">
+                    <h3>Tokoku</h3>
+                    <small class="d-block mb-3">© 2018-2019</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Beli</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-light" href="#">Cara Belanja</a></li>
+                        <li><a class="text-light" href="#">Pembayaran</a></li>
+                        <li><a class="text-light" href="#">Pengembalian Dana</a></li>
+                        <li><a class="text-light" href="#">Hot List</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Jual</h5>
+                    <ul class="list-unstyled text-small">
+                        <!-- <li><a class="text-light" href="#">Cara Berjualan Online</a></li> -->
+                        <li><a class="text-light" href="#">Penarikan Dana</a></li>
+                        <li><a class="text-light" href="#">Pusat Penjual</a></li>
+                        <li><a class="text-light" href="#">Daftar Official Store</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Bantuan</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-light" href="#">Syarat dan ketentuan</a></li>
+                        <li><a class="text-light" href="#">Kebijakan Privasi</a></li>
+                        <li><a class="text-light" href="#">Komplain Pesanan</a></li>
+                        <li><a class="text-light" href="#">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row px-5">
+                <div class="col-3 text-left">
+                    <a class="text-light" href="#">Bantuan</a>
+                    <a class="text-light" href="#">FAQ</a>
+                    <a class="text-light" href="#">Privacy</a>
+                </div>
+                <div class="col-9 text-right">
+                    <p>@2019 Tokoku</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

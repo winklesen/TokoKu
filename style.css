@@ -1,0 +1,224 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    /* font-family: Google_Sans; */
+    /* font-family: Roboto; */
+    font-family: 'Righteous',
+        cursive;
+    background: #f5f5f5;
+}
+
+.shadowhover {
+    /* box-shadow: 0px 1px 1px grey; */
+    /* border: 1px solid white; */
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+    transition: 0.75s;
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+/* img:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+    (150% zoom - Note: if the zoom is too large, it will go outside of the viewport)
+} */
+
+#carouselheader .control-caro {
+    opacity: 0;
+    transition: 0.75s;
+}
+
+#carouselheader:hover .control-caro {
+    opacity: 0.5;
+    transition: 0.75s;
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.text-blue {
+    color: #555555;
+}
+
+.text-blue:hover {
+    color: #0085BA;
+}
+
+.heart {
+    color: #FF5252;
+}
+
+.title-content {
+    font-weight: 600;
+}
+
+.shadowhover:hover {
+    box-shadow: 0px 8px 10px grey;
+    transition: 0.25s;
+}
+
+.bgheader-1 {
+    background: url(image/hpbagus.jpg);
+    background-size: cover;
+    background-position-y: 15%;
+}
+
+.bgheader-2 {
+    background: url(image/bg2.jpg);
+    background-size: cover;
+    background-position: right;
+}
+
+.bgheader-3 {
+    background: url(image/colortas.jpeg);
+    background-size: cover;
+    background-position-y: 75%;
+}
+
+.bgheader-4 {
+    background: url(image/bg1.jpg);
+    background-size: cover;
+    background-position-y: 20%;
+}
+
+.btnseemore {
+    color: #0085BA;
+    font-size: 14px;
+}
+
+.btnseemore:hover {
+    color: #0085BA;
+    text-decoration: underline;
+}
+
+.text-small {
+    font-size: 12px;
+}
+
+.imgstore {
+    width: 24%;
+    overflow: hidden;
+}
+
+.imgstore:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.btnsearchleft {
+    border-radius: 15px 0px 0px 15px;
+}
+
+label {
+    display: inline-block;
+    width: 5em;
+}
+
+nav {
+    /* font-family: 'Righteous',
+        cursive; */
+}
+
+#search {
+    border-radius: 0px 15px 15px 0px;
+}
+
+/* .btnsearchright {
+    border-radius: 0px 15px 15px 0px;
+} */
+
+.overflow {
+    height: 200px;
+}
+
+.navbutton {
+    color: white;
+    font-size: 14px;
+}
+
+.navbutton:hover {}
+
+.linkside {
+    color: black;
+}
+
+.linkside:hover {
+    background-color: #0085BA;
+    /* transition: 0.25s; */
+    transition: 0.5s;
+    opacity: 0.75;
+    color: white;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.bg-blue {
+    background: #0085BA;
+}
+
+.backTop {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-block;
+    z-index: 10000;
+    /* border: 2px solid #fff; */
+}
+
+.btn-outline-info {
+    border: 0px solid transparent;
+    background: #0085BA;
+    color: white;
+}
+
+.btn-outline-info:hover {
+    border: 0px solid transparent;
+    background: white;
+    color: #0085BA;
+}
+
+.backTop i {
+    font-size: 25px;
+    z-index: 10000;
+}
+
+.backTop:hover {
+    cursor: pointer;
+}
+
+.facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
