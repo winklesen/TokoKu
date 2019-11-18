@@ -1,2 +1,2 @@
-# Web-E-Commerce
-Projek latihan web e-commerce sederhana menggunakan Jquery
+# TokoKu
+Simple e-commerce web training project using Jquery
